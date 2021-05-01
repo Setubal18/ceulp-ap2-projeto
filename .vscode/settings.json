@@ -1,0 +1,13 @@
+{
+  "stylusSupremacy.insertNewLineAroundImports": true,
+  "stylusSupremacy.insertNewLineAroundBlocks": true,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertSpaceBeforeComment": true,
+  "stylusSupremacy.insertSpaceAfterComment": true,
+  "stylusSupremacy.insertNewLineAroundOthers":true,
+  "stylusSupremacy.selectorSeparator": ", ",
+  "stylusSupremacy.tabStopChar": "\t",
+  "stylusSupremacy.newLineChar": "\n",
+  "stylusSupremacy.quoteChar": "'",
+
+}

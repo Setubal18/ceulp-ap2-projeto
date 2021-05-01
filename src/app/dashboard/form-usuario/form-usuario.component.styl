@@ -1,0 +1,36 @@
+@import '../../../stylus/_colors';
+
+form
+  background-color: escala-cinza-1;
+  border-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 5px;
+
+  label
+    display: flex;
+    margin: 0.1rem;
+
+  input, select,&[type='date']
+    width: 100%;
+    border: solid thin color-medium-shade;
+    border-radius: 8px;
+    background: white;
+    transition: 0.5s;
+    margin: 10px 0;
+    padding: 10px;
+
+    &:placeholder
+      color: color-secondary !important;
+
+    &:hover, &:focus
+      background: color-medium-rgb;
+      border: solid thin color-secondary;
+
+    &[type='date']
+      padding: 7px 10px;
+
+
+.save
+    background-color: color-success
+    color: color-success-constrast

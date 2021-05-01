@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container__login">
+    <div class="card">
+      <ng-container>
+        <div class="formgroup" [formGroup]="loginForm">
+          <div class="formcontrol">
+            <label for="email">Username</label>
+            <input placeholder='Username' type="text" name="username" formControlName="login">
+          </div>
+          <div class="formcontrol">
+            <label for="password">Senha</label>
+            <input placeholder="*****" type="password" name="password" formControlName="pass">
+          </div>
+          <small class="text-danger" *ngIf="resp?.status == 400">{{resp?.message}}</small>
+        </div>
+      </ng-container>
+      <button class="btn btn-secundary" (click)="entrar()" [disabled]="!loginForm?.valid">Entrar</button>
+    </div>
+  </div>
+</div>

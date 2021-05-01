@@ -1,0 +1,52 @@
+@import 'src/stylus/_colors.styl'
+
+.container
+  display flex
+  height 100%
+  min-height 95vh
+  min-width: 95vw;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &__login
+    flex 0.5
+    display flex
+    justify-content center
+    align-items center
+    text-align center
+    height 100%
+    min-width 50vw
+    width 100%
+    .card
+      padding: 50px;
+      max-width: 500px;
+      border: thin solid color-tertiary-tint;
+      box-shadow: 0 0 3em color-tertiary-shade;
+      border-radius: 25px;
+
+  .formgroup
+    margin 30px 0
+    justify-content start
+    align-items start
+    text-align start
+    transition all .5s
+
+input, select
+  width 100%
+  border solid thin color-medium-shade
+  border-radius 8px
+  background white
+  transition 0.5s
+  margin 10px 0
+  padding 14px
+
+  &:placeholder
+    color color-secondary !important
+
+  &:hover, &:focus
+    background color-medium-rgb
+    border solid thin color-secondary
+
+  &[type='date']
+    padding 7px 10px
