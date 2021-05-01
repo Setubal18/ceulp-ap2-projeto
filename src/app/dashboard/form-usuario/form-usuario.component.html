@@ -1,0 +1,38 @@
+<form class="card-main" action="" [formGroup]="userForm">
+  <div class="row">
+    <div class="col-xl-5 col-md-6">
+      <label for="">Nome</label>
+      <input type="text" placeholder="Seu nome" formControlName="name">
+    </div>
+    <div class="col-xl-4 col-md-6">
+      <label for="">Data de Nascimento</label>
+      <input type="date" formControlName="birthday">
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <label for="">Sexo</label>
+      <select name="sexo" id="" formControlName="sexo">
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+        <option value="O">Outro</option>
+        <option value="N">Prefiro Não Informar</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-5 col-md-6">
+      <label for="">Email</label>
+      <input type="email" placeholder="Seu Email">
+    </div>
+    <div class="col-xl-4 col-md-6">
+      <label for="">telefone</label>
+      <input type="text" placeholder="Seu telefone">
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <label for="">Endereco</label>
+      <input type="text" placeholder="Seu endereco">
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <button class="btn save">Save</button>
+  </div>
+</form>
