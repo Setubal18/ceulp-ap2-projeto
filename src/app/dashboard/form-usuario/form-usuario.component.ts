@@ -18,6 +18,7 @@ export class FormUsuarioComponent implements OnInit {
       birthday: new FormControl(Date,Validators.required),
       email: new FormControl('',Validators.required),
       phone: new FormControl(''),
+      sexo: new FormControl(''),
       address: new FormControl(''),
       id:new FormControl('')
     })
