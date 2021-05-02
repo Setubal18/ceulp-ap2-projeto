@@ -1,29 +1,42 @@
-@import "../../../stylus/_colors"
+@import '../../../stylus/_colors.styl';
 
-:host
-  width: 100%
 .table
+  width: -webkit-fill-available;
   border: thin solid color-tertiary-tint;
-  box-shadow: 0 0 0.5em color-medium-shade
-  border-radius: 20px !important
+  box-shadow: 0 0 0.5em color-medium-shade;
+  border-radius: 20px
   padding: 1em;
   margin: 1em;
 
   table
-    min-width: 100%
+    min-width 100%
+    border-style hidden
+    border-collapse collapse
+    text-align: center
+
+    thead
+      background-color: color-medium
+      text-align: center
 
     th
       border-bottom: solid 1px color-tertiary-tint
-      color:  color-dark-shade
-      margin-bottom:
+      color: color-medium-contrast
+      padding: 10px
 
-  tbody
-    tr
-      border-bottom: thin solid color-tertiary-tint;
-      color: color-tertiary-tint;
-      box-shadow: 0 0 0.5em red;
-      border-radius: 20px !important;
+      &:first-child
+        border-radius: 15px 0px 0px 15px
+        text-align: left !important
 
-    tr:hover
-      background-color color-tertiary-tint
-      cursor default
+      &:last-child
+        border-radius: 0px 15px 15px 0px
+
+
+    tbody
+      tr
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        td
+          padding-bottom: 5px
+          padding-bottom: 5px
+          border-bottom: solid 1px color-tertiary-tint

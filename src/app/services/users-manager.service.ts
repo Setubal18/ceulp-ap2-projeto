@@ -22,30 +22,22 @@ export class UsersManagerService {
   constructor() { }
   private _users: any
   set setLocalStorageItem(user: Iuser){
-    if(this._users != null){
-      this._users.push(user)
+    let users = JSON.parse(localStorage.getItem('users'))
+    if(users != null){
+      users.push(user)
+
+      localStorage.setItem('users',JSON.stringify(users))
     }
     else{
-      this._users = []
-      this._users.push(user)
+      users = []
+      users.push(user)
+      localStorage.setItem('users',JSON.stringify(users))
     }
-    // let users = JSON.parse(localStorage.getItem('users'))
-    // if(users != null){
-    //   users.push(user)
-
-    //   localStorage.setItem('users',JSON.stringify(users))
-    // }
-    // else{
-    //   users = []
-    //   users.push(user)
-    //   localStorage.setItem('users',JSON.stringify(users))
-    // }
   }
 
   getLocalStorageItem(){
-    // console.log(JSON.parse(localStorage.getItem('users')))
-    // return JSON.parse(localStorage.getItem('users'))
-
+    console.log(JSON.parse(localStorage.getItem('users')))
+    return JSON.parse(localStorage.getItem('users'))
     return this._users
   }
 
