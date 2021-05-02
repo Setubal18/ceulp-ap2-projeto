@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { FormUsuarioModule } from './form-usuario/form-usuario.module';
 import { UserListsComponent } from './user-lists/user-lists.component';
 import { UserListsModule } from './user-lists/user-lists.module';
+import { EstatisticasModule } from './estatisticas/estatisticas.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { UserListsModule } from './user-lists/user-lists.module';
   imports: [
     CommonModule,
     FormUsuarioModule,
+    EstatisticasModule,
     UserListsModule,
     DashboardRoutingModule
   ]

@@ -1,39 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-xl-12">
-      <h3 class="text-tertiary">Estatisticas</h3>
-        <table class="table-border">
-          <tr>
-            <td class = "table-row">Usuários Cadastrados</td>
-             <td class = "table-row">numero!</td>
-          </tr>
-          <tr>
-            <td class = "table-row">Usuários do Sexo Feminino</td>
-             <td class = "table-row">numero!</td>
-          </tr>
-          <tr>
-            <td class = "table-row">Usuários do Sexo Masculino</td>
-             <td class = "table-row">numero!</td>
-          </tr>
-          <tr>
-            <td class = "table-row">Usuários do Sexo Outros</td>
-             <td class = "table-row">numero!</td>
-          </tr>
-          <tr>
-            <td class = "table-row" >Usuários que Preferiram não Informar</td>
-             <td class = "table-row">numero!</td>
-          </tr>
-        </table>
+      <h3 class="text-primary">Estatisticas</h3>
+        <app-estatisticas></app-estatisticas>
     </div>
   </div>
   <div class="row">
     <div class="col-xl-6">
-      <h3 class="text-primary">Você está logado 😍</h3>
+      <h3 class="text-primary">Cadastro</h3>
       <app-form-usuario (usersEvent)="userCadastroEvent($event)"></app-form-usuario>
 
     </div>
     <div class="col-xl-6">
-      <h3 class='text-secondary'>Listagem de Cadastrados</h3>
+      <h3 class='text-primary'>Listagem de Cadastrados</h3>
       <app-user-lists [users]="listUsers"></app-user-lists>
     </div>
   </div>

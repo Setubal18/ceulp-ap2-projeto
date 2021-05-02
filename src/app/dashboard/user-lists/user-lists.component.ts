@@ -20,7 +20,7 @@ export class UserListsComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     console.log(typeof changes.users)
     if(changes.users){
-      if(this.userList.length > 0){
+      if(this.userList && this.userList.length > 0){
         this.userList = changes.users.currentValue
       }
     }

@@ -22,12 +22,12 @@ export class FormUsuarioComponent implements OnInit {
 
   initForm(){
     this.userForm = this.fb.group({
-      name: new FormControl(''),
+      name: new FormControl('Leonardo'),
       birthday: new FormControl(Date),
-      email: new FormControl(''),
-      phone: new FormControl(''),
-      sexo: new FormControl(''),
-      address: new FormControl(''),
+      email: new FormControl('user@email'),
+      phone: new FormControl('63984185515'),
+      sexo: new FormControl('Sexo'),
+      address: new FormControl('207 sul alameda 8 lote 34'),
       id:new FormControl('')
     })
   }
@@ -37,6 +37,7 @@ export class FormUsuarioComponent implements OnInit {
   }
 
   save(){
+    console.log(this.userForm.controls)
     this.generateId()
     this.usersManagerService.setLocalStorageItem = this.userForm.value
     console.log(this.usersManagerService.getLocalStorageItem())
