@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersManagerService } from '../services/users-manager.service';
 
 
 @Component({
@@ -8,14 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   public listUsers = []
-  countF: number;
-  countM: number;
-  countO: number;
-  countN:number;
 
-  constructor() { }
+  constructor(private usersManagerService:UsersManagerService) { }
 
   ngOnInit(): void {
+    this.listUsers = this.usersManagerService.getLocalStorageItem()
+
   }
 
   public userCadastroEvent(event){
@@ -23,21 +22,4 @@ export class DashboardComponent implements OnInit {
     this.listUsers = event
   }
 
-  count(){
-    return
-    this.listUsers.map(user => {
-      if(user.sexo === "F"){
-        this.countF +=1;
-      }
-      else if (user.sexo === "M"){
-        this.countM +=1;
-      }
-      else if (user.sexo === "O"){
-        this.countO +=1;
-      }
-      else {
-        this.countN +=1;
-      }
-    })
-  }
 }

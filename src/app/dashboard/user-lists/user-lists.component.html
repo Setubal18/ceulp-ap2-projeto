@@ -1,18 +1,21 @@
-<div class="table">
-  <table>
-    <thead>
-      <th>Nome</th>
-      <th>Nascimento</th>
-      <th>E-mail</th>
-      <th>Telefone</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of userList; let i = index">
-        <td>{{ user?.name }}</td>
-        <td>{{ user?.birthday }}</td>
-        <td>{{ user?.email }}</td>
-        <td>{{ user?.phone }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+<ng-container *ngIf="!reloading">
+  <div class="table">
+    <table>
+      <thead>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList">
+          <td>{{ user?.name }}</td>
+          <td>{{ user?.birthday }}</td>
+          <td>{{ user?.email }}</td>
+          <td>{{ user?.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
