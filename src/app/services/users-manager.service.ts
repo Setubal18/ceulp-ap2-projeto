@@ -6,7 +6,7 @@ interface Iuser {
   email: string
   phone: string
   sexo: string,
-  address: string,
+  job: string,
   id: string
 }
 
@@ -36,9 +36,7 @@ export class UsersManagerService {
   }
 
   getLocalStorageItem(){
-    console.log(JSON.parse(localStorage.getItem('users')))
     return JSON.parse(localStorage.getItem('users'))
-    return this._users
   }
 
 }

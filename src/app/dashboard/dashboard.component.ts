@@ -18,7 +18,6 @@ export class DashboardComponent implements OnInit {
   }
 
   public userCadastroEvent(event){
-    console.log(event)
     this.listUsers = event
   }
 
