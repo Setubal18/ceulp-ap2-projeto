@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { UsersManagerService } from '../../services/users-manager.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { UsersManagerService } from '../../services/users-manager.service';
   templateUrl: './user-lists.component.html',
   styleUrls: ['./user-lists.component.styl'],
 })
-export class UserListsComponent implements OnInit {
+export class UserListsComponent implements OnInit,OnChanges {
   @Input() users!: any;
   public userList: any;
   public reloading = false
