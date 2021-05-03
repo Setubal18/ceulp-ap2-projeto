@@ -4,7 +4,8 @@
     <table>
       <thead>
         <th>Nome</th>
-        <th>Nascimento</th>
+        <th>Idade</th>
+        <th>Trabalho</th>
         <th>E-mail</th>
         <th>Telefone</th>
       </thead>
@@ -12,6 +13,7 @@
         <tr *ngFor="let user of userList">
           <td>{{ user?.name }}</td>
           <td>{{ user?.birthday }}</td>
+          <td>{{ user?.job }}</td>
           <td>{{ user?.email }}</td>
           <td>{{ user?.phone }}</td>
         </tr>

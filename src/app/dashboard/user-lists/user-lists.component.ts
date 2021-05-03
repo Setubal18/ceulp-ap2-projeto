@@ -17,10 +17,7 @@ export class UserListsComponent implements OnInit {
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.reloading = true
-    if (this.userList && this.userList.length > 0) {
-      this.userList = changes.users.currentValue;
-      this.reloading = false
-    }
+    this.userList = changes.users.currentValue;
     this.reloading = false
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.

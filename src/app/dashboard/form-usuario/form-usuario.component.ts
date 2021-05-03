@@ -13,7 +13,6 @@ export class FormUsuarioComponent implements OnInit {
   constructor(
     private fb:FormBuilder,
     private usersManagerService:UsersManagerService
-
     ) {}
 
   ngOnInit(): void {
@@ -22,12 +21,12 @@ export class FormUsuarioComponent implements OnInit {
 
   initForm(){
     this.userForm = this.fb.group({
-      name: new FormControl('Leonardo'),
-      birthday: new FormControl(Date),
-      email: new FormControl('user@email'),
-      phone: new FormControl('63984185515'),
+      name: new FormControl('',Validators.required),
+      birthday: new FormControl(0, [Validators.min(17),Validators.required]),
+      email: new FormControl('',[Validators.email,Validators.required]),
+      phone: new FormControl(''),
       sexo: new FormControl('Sexo'),
-      address: new FormControl('207 sul alameda 8 lote 34'),
+      job: new FormControl(''),
       id:new FormControl('')
     })
   }
@@ -37,10 +36,13 @@ export class FormUsuarioComponent implements OnInit {
   }
 
   save(){
-    console.log(this.userForm.controls)
     this.generateId()
     this.usersManagerService.setLocalStorageItem = this.userForm.value
-    console.log(this.usersManagerService.getLocalStorageItem())
     this.usersEvent.emit(this.usersManagerService.getLocalStorageItem())
+    this.ngOnInit()
+  }
+
+  get validSex(){
+    return this.userForm.value.sexo !== 'Sexo' ? true : false
   }
 }

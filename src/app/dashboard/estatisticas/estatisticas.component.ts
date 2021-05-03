@@ -22,6 +22,7 @@ export class EstatisticasComponent implements OnInit {
     totalM: 0,
     totalO: 0,
     totalN: 0,
+    averageAge:0,
   };
 
   private countsTotal = {
@@ -49,34 +50,36 @@ export class EstatisticasComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.listUsers && this.listUsers.length > 0) {
       this.listUsers = changes.users.currentValue
       this.do()
-    }
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-
-  }
-
-  ngAfterViewChecked(): void {
-    this.do();
-    //this.cd.detectChanges();
   }
 
   do() {
     this.reloading = true;
     setTimeout(() => {
+      this.resetCount();
       this.count();
+      this.averageAge()
     }, 50);
     this.reloading = false;
   }
 
+  averageAge(){
+    let totalAges = 0
+    if (this.listUsers) {
+      this.listUsers.map((user) => {
+        totalAges += user?.birthday ? user.birthday : 0
+      });
+
+      this.counts.averageAge = Math.round(totalAges/this.listUsers.length)
+    }
+  }
+
   count() {
-    this.resetCount();
     if (this.listUsers) {
       this.counts.total = this.listUsers.length > 0 ? this.listUsers.length : 0;
       this.listUsers.map((user) => {
-        if (user.sexo) {
+        if (user.sexo !== 'Sexo') {
           const reckon = this.countsTotal[user.sexo];
           reckon();
         }
