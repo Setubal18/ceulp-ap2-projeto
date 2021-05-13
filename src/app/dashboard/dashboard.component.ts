@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersManagerService } from '../services/users-manager.service';
+import { ListObservable } from '../shared/observables/userList';
+import { UserSubject } from '../shared/subscribe/userSubscriber';
 
 
 @Component({
@@ -9,11 +11,17 @@ import { UsersManagerService } from '../services/users-manager.service';
 })
 export class DashboardComponent implements OnInit {
   public listUsers = []
-
-  constructor(private usersManagerService:UsersManagerService) { }
+  private userSubject : any
+  private listObservable: any
+  constructor(private usersManagerService:UsersManagerService) {
+    this.listUsers = this.usersManagerService.getLocalStorageItem()
+    this.userSubject =  new UserSubject()
+    this.listObservable = new ListObservable()
+    this.userSubject.addObservable(this.listObservable)
+    this.userSubject.addUsers(this.listUsers)
+  }
 
   ngOnInit(): void {
-    this.listUsers = this.usersManagerService.getLocalStorageItem()
 
   }
 

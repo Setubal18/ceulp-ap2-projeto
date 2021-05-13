@@ -20,7 +20,6 @@ interface Iusers {
 export class UsersManagerService {
 
   constructor() { }
-  private _users: any
   set setLocalStorageItem(user: Iuser){
     let users = JSON.parse(localStorage.getItem('users'))
     if(users != null){

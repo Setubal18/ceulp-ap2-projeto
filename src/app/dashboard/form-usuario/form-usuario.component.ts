@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { UsersManagerService } from '../../services/users-manager.service';
+import { UserSubject } from '../../shared/subscribe/userSubscriber';
+import { ListObservable } from '../../shared/observables/userList';
 
 @Component({
   selector: 'app-form-usuario',
@@ -9,14 +11,21 @@ import { UsersManagerService } from '../../services/users-manager.service';
 })
 export class FormUsuarioComponent implements OnInit {
   public userForm: FormGroup;
-  @Output() usersEvent = new EventEmitter()
+  private userSubject: UserSubject = new UserSubject()
+  // private listObservable: any
+  //@Output() usersEvent = new EventEmitter()
   constructor(
     private fb:FormBuilder,
-    private usersManagerService:UsersManagerService
-    ) {}
+    private usersManagerService:UsersManagerService,
+    ) {
+      //this.userSubject =
+      // this.listObservable = new ListObservable()
+      // this.userSubject.addObservable(this.listObservable)
+    }
 
   ngOnInit(): void {
     this.initForm()
+    console.log('Ola',this.userSubject)
   }
 
   initForm(){
@@ -37,8 +46,9 @@ export class FormUsuarioComponent implements OnInit {
 
   save(){
     this.generateId()
+    //this.userSubject.addUser(this.userForm.value)
     this.usersManagerService.setLocalStorageItem = this.userForm.value
-    this.usersEvent.emit(this.usersManagerService.getLocalStorageItem())
+    //this.usersEvent.emit(this.usersManagerService.getLocalStorageItem())
     this.ngOnInit()
   }
 
