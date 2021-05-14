@@ -8,10 +8,10 @@
     </div>
     <div class="col-xl-4 col-md-6">
       <label for="">Idade</label>
-      <input type="number" formControlName="birthday">
+      <input type="number" formControlName="birthday" (input)=checkValue($event)>
       <small class="text-danger" appMensagensErrosForms [control]="userForm.get('birthday')"></small>
-
     </div>
+
     <div class="col-xl-3 col-md-6">
       <label for="">Sexo</label>
       <select formControlName="sexo">
