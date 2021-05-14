@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { UsersManagerService } from '../../services/users-manager.service';
+import { UsersManagerService } from 'src/app/shared/services/users-manager.service';
 
 @Component({
   selector: 'app-user-lists',

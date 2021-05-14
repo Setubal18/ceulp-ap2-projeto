@@ -9,7 +9,7 @@
           </div>
           <div class="formcontrol">
             <label for="password">Senha</label>
-            <input placeholder="*****" type="password" name="password" formControlName="pass">
+            <input placeholder="*****" type="password" name="password" formControlName="pass" data-private>
           </div>
           <small class="text-danger" *ngIf="resp?.status == 400">{{resp?.message}}</small>
         </div>

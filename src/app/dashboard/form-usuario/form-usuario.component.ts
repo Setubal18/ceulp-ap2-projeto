@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { UsersManagerService } from '../../services/users-manager.service';
+import { UsersManagerService } from 'src/app/shared/services/users-manager.service';
 
 @Component({
   selector: 'app-form-usuario',

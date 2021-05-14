@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import LogRocket from 'logrocket';
+import  LogRocket from 'logrocket';
 import { environment } from 'src/environments/environment';
+import { UserManagerService } from './shared/services/user-manager.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,16 @@ import { environment } from 'src/environments/environment';
 export class AppComponent implements OnInit {
   title = 'ceulp-api2-projeto';
 
-  ngOnInit(): void {
+  constructor(private readonly userManagerService:UserManagerService){}
 
+  ngOnInit(): void {
+    this.initLog()
   }
 
-  initLog(){
-    LogRocket.identify(environment.LOGROCKET)
+  initLog() {
+    LogRocket.init(environment.LOGROCKET)
+    if(this.userManagerService.user){
+      LogRocket.identify(this.userManagerService.user.app)
+    }
   }
 }
