@@ -1,4 +1,38 @@
-# CeulpApi2Projeto
+# CeulpAp2Projeto
+Projeto utilizado para realizar os trabalhos de AP2 do CEULP/ULBRA
+----
+## Matérias que Utilizaram esse Projeto
+- Administração de redes
+- Evolução e Manutenção de software
+
+---
+<br>
+
+## Projeto de Administração de Redes
+
+###  Configuração do APACHE2
+<p>configuração de uma rede utilizando apache2 </p>
+
+### Alunos Envolvidos
+- [Leonardo Setubal Maggio](https://github.com/Setubal18)
+
+<br>
+----
+## Evolução e Manutenção de Software
+
+#### Monitoramento de Sistema
+Este Trabalho tem como objeto o monitoramento de log de um sistema, a ferramenta utilizada foi o [logRocket](https://logrocket.com/)
+
+### Alunos Envolvidos
+Alunos que fizeram parte desse projeto são:
+- [Leonardo Setubal Maggio](https://github.com/Setubal18)
+- [Giulliany Lima Bezerra](https://github.com/Giulliany)
+- [Leticia Bueno](https://github.com/letbueno)
+- [Stefani Carol](https://github.com/stefanicarol)
+
+
+----
+# Documentação DO sistema
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
