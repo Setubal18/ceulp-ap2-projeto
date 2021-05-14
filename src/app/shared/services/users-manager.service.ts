@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as LogRocket from 'logrocket';
 
 interface Iuser {
   name: string
@@ -36,6 +37,7 @@ export class UsersManagerService {
   }
 
   getLocalStorageItem(){
+    LogRocket.info(localStorage.getItem('users'))
     return JSON.parse(localStorage.getItem('users'))
   }
 

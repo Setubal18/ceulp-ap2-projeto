@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  LOGROCKET: 'ap2/ap2-projeto'
 };
