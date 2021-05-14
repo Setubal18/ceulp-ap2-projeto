@@ -22,7 +22,7 @@ export class FormUsuarioComponent implements OnInit {
   initForm(){
     this.userForm = this.fb.group({
       name: new FormControl('',Validators.required),
-      birthday: new FormControl(0, [Validators.min(17),Validators.required]),
+      birthday: new FormControl([Validators.min(0),Validators.required]),
       email: new FormControl('',[Validators.email,Validators.required]),
       phone: new FormControl(''),
       sexo: new FormControl('Sexo'),
@@ -40,6 +40,16 @@ export class FormUsuarioComponent implements OnInit {
     this.usersManagerService.setLocalStorageItem = this.userForm.value
     this.usersEvent.emit(this.usersManagerService.getLocalStorageItem())
     this.ngOnInit()
+  }
+
+  checkValue(event){
+    if(event.target.value < 0){
+      event.target.value = 0
+    }
+  }
+
+  keyup(){
+    console.log(this.userForm)
   }
 
   get validSex(){
