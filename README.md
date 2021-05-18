@@ -17,7 +17,8 @@ Projeto utilizado para realizar os trabalhos de AP2 do CEULP/ULBRA
 - [Leonardo Setubal Maggio](https://github.com/Setubal18)
 
 <br>
-----
+
+
 ## Evolução e Manutenção de Software
 
 #### Monitoramento de Sistema
