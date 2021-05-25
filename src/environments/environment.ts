@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  LOGROCKET: 'ap2/ap2-projeto'
+  LOGROCKET: 'wkowry/ap2-ems'
 
 };
 
