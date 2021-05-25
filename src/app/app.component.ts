@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   initLog() {
     LogRocket.init(environment.LOGROCKET)
     if(this.userManagerService.user){
-      LogRocket.identify(this.userManagerService.user.app)
+      LogRocket.identify(this.userManagerService.user.login)
     }
   }
 }

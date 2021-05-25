@@ -9,12 +9,12 @@ const routes: Routes = [
   },
   {
     path: 'public',
-    loadChildren: () => import('./public/public.module')
+    loadChildren: () => import('./modules/public/public.module')
     .then(r => r.PublicModule)
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module')
+    loadChildren: () => import('./modules/dashboard/dashboard.module')
     .then(r => r.DashboardModule)
   }
 ];

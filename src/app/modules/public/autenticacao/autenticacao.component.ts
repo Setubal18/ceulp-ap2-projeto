@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as LogRocket from 'logrocket';
-import { UserManagerService } from '../../shared/services/user-manager.service';
-
+import { UserManagerService } from '../../../shared/services/user-manager.service';
+import faker from 'faker'
 @Component({
   selector: 'app-autenticacao',
   templateUrl: './autenticacao.component.html',
@@ -52,8 +52,9 @@ export class AutenticacaoComponent implements OnInit {
 
   entrar(){
     this.isPass();
+    console.log(faker.datatype.uuid())
     if (this.resp.status === 200){
-      LogRocket.identify(this.loginForm.value.email)
+      LogRocket.identify(this.loginForm.value.login)
       this.userManagerService.user = this.loginForm.value
       this.router.navigate(['./dashboard']);
     }
