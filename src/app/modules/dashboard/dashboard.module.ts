@@ -3,10 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { FormUsuarioModule } from './form-usuario/form-usuario.module';
-import { UserListsComponent } from './user-lists/user-lists.component';
-import { UserListsModule } from './user-lists/user-lists.module';
-import { EstatisticasModule } from './estatisticas/estatisticas.module';
+import { HeaderModule } from '../../shared/components/header/header.module';
 
 
 @NgModule({
@@ -15,9 +12,7 @@ import { EstatisticasModule } from './estatisticas/estatisticas.module';
   ],
   imports: [
     CommonModule,
-    FormUsuarioModule,
-    EstatisticasModule,
-    UserListsModule,
+    HeaderModule,
     DashboardRoutingModule
   ]
 })

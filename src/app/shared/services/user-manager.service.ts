@@ -13,4 +13,8 @@ export class UserManagerService {
   get user(){
     return JSON.parse(localStorage.getItem('user'))
   }
+
+  limpar(){
+    localStorage.removeItem('user')
+  }
 }

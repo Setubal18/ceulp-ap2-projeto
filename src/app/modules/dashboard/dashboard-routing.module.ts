@@ -5,9 +5,23 @@ import { DashboardComponent } from './dashboard.component';
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent
-
-  }
+    pathMatch:'full',
+    redirectTo:'atividade1',
+  },
+  {
+    path:'',
+    component:DashboardComponent,
+    children:[
+      {
+        path:'atividade1',
+        loadChildren:() => import('./atividade1/atividade1.module')
+        .then(r => r.Atividade1Module)
+      },
+      {
+        path:'secret',
+      }
+    ]
+  },
 ];
 
 @NgModule({

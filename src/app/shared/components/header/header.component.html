@@ -1,0 +1,34 @@
+<header>
+	<div>
+		<h1>
+			<img alt="Algum animal"
+				[src]="foto"/>
+		</h1>
+		<ul>
+			<li>
+				<a>Dashboard</a>
+			</li>
+			<li>
+				<a>Secret</a>
+			</li>
+			<li>
+				<a >Secret</a>
+			</li>
+		</ul>
+		<div>
+			<p>
+				{{userName}}
+				<i class="far fa-arrow-alt-circle-down"></i>
+				<i class="fas fa-arrow-alt-circle-down"></i>
+			</p>
+			<ul>
+				<li>
+					<a>Configurações</a>
+				</li>
+				<li>
+					<a (click)="sair()">Sair</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>

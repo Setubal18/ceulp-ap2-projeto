@@ -10,15 +10,8 @@ import { UsersManagerService } from '../../shared/services/users-manager.service
 export class DashboardComponent implements OnInit {
   public listUsers = []
 
-  constructor(private usersManagerService:UsersManagerService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.listUsers = this.usersManagerService.getLocalStorageItem()
-
   }
-
-  public userCadastroEvent(event){
-    this.listUsers = event
-  }
-
 }
