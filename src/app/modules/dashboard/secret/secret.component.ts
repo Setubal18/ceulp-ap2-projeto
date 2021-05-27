@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretComponent implements OnInit {
 
-  private array = []
+  private array
+  private objeto: any
   constructor() { }
 
   ngOnInit(): void {
@@ -21,10 +22,18 @@ export class SecretComponent implements OnInit {
 
 
   percorreArray(){
-    console.log(`1`)
+    var numero = 3.14
+    console.log(numero.toPrecision(0));
+    Math.max(2, 42,);
+    console.log(this.objeto.nome)
+    this.array.pop()
     this.array.forEach((item)=>{
       console.log(item)
     })
+  }
+
+  fazAlgo(event){
+    console.log(event)
   }
 
 }

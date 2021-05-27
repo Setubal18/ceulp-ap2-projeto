@@ -4,7 +4,7 @@ import { SecretComponent } from './secret.component';
 
 const routes: Routes = [
   {
-    path:``,
+    path:"",
     component:SecretComponent
   }
 ];

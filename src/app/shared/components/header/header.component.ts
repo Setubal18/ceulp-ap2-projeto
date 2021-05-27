@@ -35,6 +35,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/dashboard/secret'])
   }
 
+  config(){
+    this.router.navigate(['/404'])
+  }
+
   sair(){
     this.userManagerService.limpar()
     this.router.navigate(['/public/autenticacao'])
