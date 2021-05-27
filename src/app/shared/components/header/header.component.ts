@@ -27,6 +27,14 @@ export class HeaderComponent implements OnInit {
     return this.userManagerService.user.login
   }
 
+  atividade1(){
+    this.router.navigate(['/dashboard/atividade1'])
+  }
+
+  secret(){
+    this.router.navigate(['/dashboard/secret'])
+  }
+
   sair(){
     this.userManagerService.limpar()
     this.router.navigate(['/public/autenticacao'])
